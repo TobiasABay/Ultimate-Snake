@@ -1,0 +1,22 @@
+class Mad {
+ int cols = floor(random(width/str-0.01));
+ int rows = floor(random(height/str-0.01));
+ PVector pos = new PVector(cols,rows);
+ int r = (int)random(25,255);
+ int g = (int)random(25,255);
+ int b = (int)random(25,255);
+ 
+ void show() {
+   fill(r,g,b);
+   circle(pos.x*str+str/2,pos.y*str+str/2,str);
+}
+
+void newFood() {
+  r = (int)random(25,255);
+  g = (int)random(25,255);
+  b = (int)random(25,255);
+  cols = floor(random(width/str-0.01));
+  rows = floor(random(height/str-0.01));
+  pos.set(cols,rows);
+}
+}
