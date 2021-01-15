@@ -1,0 +1,23 @@
+class Objekter {
+  int cols = floor(random(width/str-0.01));
+  int rows = floor(random(height/str-0.01));
+  PVector pos = new PVector(cols, rows);
+  PVector speed = new PVector(0, 1);
+  int time = millis();
+
+  void show() {
+    fill(255);
+    circle(pos.x*str+str/2, pos.y*str+str/2, str);
+    pos.add(speed);
+
+    if (pos.y > 30) {
+      pos.y = 0;
+      pos.x = floor(random(0, 30));
+    }
+  }
+}
+/*
+  boolean spilletSlut(){
+ float d = dist();
+ }
+ */
